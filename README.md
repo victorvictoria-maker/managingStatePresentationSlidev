@@ -1,4 +1,4 @@
-# Welcome to my Slidev presentation on managing state in React! This project is part of a collaborative effort with my AltSchool colleagues, where we delve into the React documentation together. My assigned portion focuses on:
+## Welcome to my Slidev presentation on managing state in React! This project is part of a collaborative effort with my AltSchool colleagues, where we delve into the whole React documentation together. My assigned portion which is what this presentation containes focuses on:
 
 - Reacting to Input with State
 - Choosing the State Structure
