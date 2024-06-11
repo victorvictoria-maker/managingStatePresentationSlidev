@@ -19,7 +19,7 @@ highlighter: shiki
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations#slide-transitions
-transition: slide-left
+transition: fade
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 ---
@@ -117,28 +117,6 @@ The last comment block of each slide will be treated as slide notes. It will be 
 4.  Simplify State Variables: Remove non-essential state variables to keep the state minimal and efficient.
 5.  Connect Event Handlers: Use event handlers to update the state.
 
-<!-- # What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why) -->
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
 <style>
 h1 {
   background-color: #2B90B6;
@@ -157,7 +135,7 @@ h1 {
 
 <br>
 
-```jsx {all}{maxHeight:'500px'}
+```jsx {21-38|9-18|4-7|all}{maxHeight:'500px'}
 import { useState } from "react";
 
 function LoginForm() {
@@ -223,7 +201,7 @@ Connect the event handlers to set the state. This ensures that state changes in 
 <br>
 <!-- 2-3|5 -->
 
-```jsx {|all}{maxHeight:'500px'}
+```jsx {8-16|4-6|all}{maxHeight:'500px'}
 import { useState } from "react";
 
 function LoginForm() {
@@ -305,7 +283,7 @@ If you always update two or more state variables together, consider merging them
 
 <br>
 
-```jsx
+```jsx{5-19|1-4|all}
 const [firstName, setFirstName] = useState("");
 const [lastName, setLastName] = useState("");
 const [middleName, setMiddleName] = useState("");
@@ -342,7 +320,7 @@ Avoid maintaining state variables that can contradict each other.
 
 <br>
 
-```jsx
+```jsx{2-3|6|all}
 // Instead of
 const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
 const [user, setUser] = useState(null);
@@ -377,11 +355,9 @@ const [fullName, setFullName] = useState(`${firstName} ${lastName}`);
 const fullName = `${firstName} ${lastName}`;
 ```
 
-<br>
-
 Don’t put props into state unless you specifically want to prevent updates.
 
-```jsx {all}{maxHeight:'400px'}
+```jsx {1-6|9-13|all}{maxHeight:'350px'}
 function Message({ messageColor }) {
   const [color, setColor] = useState(messageColor);
 
@@ -523,7 +499,7 @@ If updating nested state is complex, consider flattening it.
 
 <br>
 
-```jsx
+```jsx{2-12|all}
 // Instead of deeply nested state
 const [user, setUser] = useState({
   profile: {
@@ -569,3 +545,17 @@ h1 {
 </style>
 
 ---
+
+# THANK YOU.
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
